@@ -1,0 +1,63 @@
+@font-face {
+	font-family: "Satoshi";
+	src: url(fonts/Satoshi-Variable.ttf);
+}
+html {
+}
+body {
+	font-family: "Satoshi" !important;
+	background-image: url(Images/bg_admin2.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	margin: 0;
+	overflow-x: hidden;
+	display: block;
+}
+
+/* -------------HEADER--------------- */
+.navbar-custom {
+	background-color: #212121;
+	height: 8rem;
+	font-size: 1.2rem;
+}
+
+.logo-navbar {
+	height: 4rem;
+	width: auto;
+}
+.nav-link {
+	margin-left: 1.5rem;
+	color: #fafafa !important;
+}
+
+.nav-link:hover {
+	color: #d1d1d1 !important;
+}
+.MenuHeader {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.MenuHeader::after {
+	display: none !important;
+}
+
+.MenuHeader img {
+	height: 4rem;
+	width: auto;
+}
+.OpcoesMenu {
+	background-color: #212121 !important;
+	font-size: 1.2rem !important;
+  }
+  
+  .OpcoesMenu .dropdown-item {
+	color: #fafafa !important; 
+	margin-bottom: 10%;
+  }
+  
+  .OpcoesMenu .dropdown-item:hover {
+	background-color: #333333 !important; 
+	color: #fafafa !important;
+  }
+  /* ------------------------------------ */
