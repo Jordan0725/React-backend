@@ -263,4 +263,57 @@ body {
   color: #fff;
   margin: 0;
 }
-/* --------------MENSAGENS-------------- */
+/* --------------EditComents-------------- */
+
+.EditC-header{
+  background-color: #121111;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  max-width: 80rem;
+  padding: 16px 24px; 
+  margin: auto;  
+}
+
+.EditC{
+  background-color: #2B2A2A;
+  display: flex;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 24px;
+  max-width: 80rem;
+  margin: auto;
+  margin-bottom: 10%;
+  color: white;
+  justify-content: space-between;
+}
+.EditC-containers{
+  background-color: #121111;
+  height: 12rem;
+  width: 22rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.EditC-containers p{
+  font-size: 1.3rem;
+  margin-inline: 10%;
+  margin-top: 1rem;
+
+}
+.EditC h1{
+  font-size: 1.4rem;
+}
+.EditC-ID{
+  margin-inline: 12%;
+  justify-content: space-between;
+  display: flex;
+}
+.EditC-ID span{
+  font-size: 1.2rem;
+}
+.EditC-containers input{
+
+}

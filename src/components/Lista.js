@@ -1,8 +1,6 @@
 import React from "react";
 import Coment from "./Comentarios"
 
-const mensagens = [1, 2, 3, 4];
-
 function Lista() {
   return (
     <div className="Lista-container">
