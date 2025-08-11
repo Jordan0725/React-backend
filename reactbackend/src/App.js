@@ -6,7 +6,7 @@ import List from './components/Lista.js'
 import EditD from './components/EditDepoimento.js'
 import VSicon from './components/IconeVisu.js'
 import ViewComents from './components/ViewComents.js'
-
+import { DepoimentosProvider } from './DepoimentosContext';
 
 
 function App() {
@@ -15,10 +15,11 @@ function App() {
       <Nav/>
       <Perfil/>
       <List/>
-      <EditD/>
       <VSicon/>
+      <DepoimentosProvider>
+      <EditD/>
       <ViewComents/>
-
+      </DepoimentosProvider>
 
     </div>
   );

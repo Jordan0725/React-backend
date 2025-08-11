@@ -10,7 +10,6 @@ function Comentarios() {
         const fetchDepoimentos = async () => {
             try {
                 const response = await axios.get('http://localhost:3000/depoimentos');
-                console.log("teste123 ======> ", response);
                 if (Array.isArray(response.data)) {
                     setDepoimentos(response.data);
                 } else {
@@ -23,14 +22,25 @@ function Comentarios() {
                 setLoading(false);
             }
         };
-    
+
         fetchDepoimentos();
-    }, []); 
+    }, []);
+
+    const deletarDepoimento = async (id) => {
+        try {
+            await axios.delete(`http://localhost:3000/depoimentos/${id}`);
+            // Remove da lista localmente sem precisar recarregar tudo
+            setDepoimentos(depoimentos.filter(dep => dep.id !== id));
+        } catch (err) {
+            console.error("Erro ao deletar depoimento:", err);
+            alert("Erro ao deletar o depoimento.");
+        }
+    };
 
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
         const date = new Date(dateString);
-        return date.toLocaleDateString('pt-BR', options); 
+        return date.toLocaleDateString('pt-BR', options);
     };
 
     if (loading) {
@@ -46,7 +56,13 @@ function Comentarios() {
                 ) : (
                     depoimentos.map(depoimento => (
                         <div key={depoimento.id} className="message-card">
-                            <div className="delete-icon" />
+                            <div
+                                className="delete-icon"
+                                onClick={() => deletarDepoimento(depoimento.id)}
+                                style={{ cursor: 'pointer' }}
+                                title="Excluir depoimento"
+                            />
+                            
                             <div className="message-body">
                                 <div className="message-info">
                                     <h3 className="user-name">{depoimento.nome_usuario}</h3>
@@ -61,6 +77,7 @@ function Comentarios() {
                                     "{depoimento.mensagem}"
                                 </p>
                             </div>
+
                             <div className="options-dot" />
                         </div>
                     ))
